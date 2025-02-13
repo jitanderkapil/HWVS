@@ -1,0 +1,74 @@
+use either termical or VS Code - 
+1. Initialize a Git Repo 
+git init
+2. create a Remote Repo on GH
+3. get path of Repo and connect this to local repo
+git remote add origin https://github.com/your-username/your-repo-name.git
+4. Create GH Actions workflow(Root Dir)
+./github/workflows(Root Dir) 
+5. i.e. create a Helloworld.yml
+Yaml
+name: Hello world (Step specifies the name of workflow)
+on: [push] (Defines the event that triggers the workflow; in this case a push to repo
+jobs: contains the jobs to be executed
+ say-hello: A job that runs on the latest ubuntu runner.
+  steps: Lists the steps to execute within job.
+  Print Hello World: A step that runs the command to print Hello World!
+  
+
+------
+Here are ten commonly used workflow triggers:
+
+push: Triggers a workflow when commits are pushed to a branch or tag in the repository. 
+DOCS.GITHUB.COM
+
+pull_request: Activates when a pull request is opened, synchronized, reopened, or closed. 
+DOCS.GITHUB.COM
+
+schedule: Allows workflows to run at specified times using cron syntax, enabling tasks like regular cleanups or scheduled reports. 
+DOCS.GITHUB.COM
+
+workflow_dispatch: Enables manual triggering of workflows via the GitHub Actions interface, GitHub CLI, or REST API. 
+DOCS.GITHUB.COM
+
+release: Initiates workflows when a release is created, published, edited, or deleted. 
+DOCS.GITHUB.COM
+
+issue_comment: Fires when a comment is created, edited, or deleted on an issue or pull request. 
+DOCS.GITHUB.COM
+
+fork: Triggers when someone forks the repository. 
+DOCS.GITHUB.COM
+
+label: Activates when a label is created, edited, or deleted in the repository. 
+DOCS.GITHUB.COM
+
+gollum: Fires when a Wiki page is created or updated in the repository. 
+DOCS.GITHUB.COM
+
+repository_dispatch: Allows external services to trigger workflows by sending custom events to the repository. 
+DOCS.GITHUB.COM
+========
+In GitHub Actions workflows, jobs are fundamental units that define a sequence of steps to be executed. While the specific jobs in a workflow depend on the project's requirements, certain types of jobs are commonly utilized across various projects. Here are ten widely used job types:
+
+Code Checkout: Retrieves the latest code from the repository to ensure that subsequent steps operate on the most recent version.
+
+Dependency Installation: Installs necessary libraries, packages, or modules required for the application to build or run.
+
+Static Code Analysis: Runs linters or other static analysis tools to enforce code quality and style guidelines.
+
+Unit Testing: Executes automated tests to verify that individual units or components of the application function as intended.
+
+Integration Testing: Tests the interaction between different modules or services to ensure they work together correctly.
+
+Build: Compiles the application or packages it into a distributable format, such as creating Docker images or compiling binaries.
+
+Deployment: Deploys the application to various environments, including staging, production, or other specified targets.
+
+Notification: Sends alerts or notifications to teams or individuals about the status of the workflow, often integrating with communication platforms like Slack or email.
+
+Security Scanning: Performs security checks to identify vulnerabilities in the codebase or dependencies.
+
+Performance Benchmarking: Measures the application's performance metrics to ensure it meets the required standards.
+
+====
