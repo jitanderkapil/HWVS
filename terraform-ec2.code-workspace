@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../terraform-ec2"
+		},
+		{
+			"name": "PartsUnlimitedE2E",
+			"path": "../PartsUnlimitedE2E"
+		}
+	],
+	"settings": {}
+}
